@@ -199,7 +199,7 @@ export function LinkBioPage() {
       >
         <motion.div variants={itemVariants} className="pt-2">
           <ProfileSection
-            name="ИЛЬСТРОЙ"
+            name="ИльСтрой"
             bio="Подписывайтесь на Telegram и ВКонтакте — там всё самое важное"
             imageUrl="/placeholder-user.jpg"
           />
