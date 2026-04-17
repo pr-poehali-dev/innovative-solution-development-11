@@ -16,7 +16,7 @@ const links = [
   {
     title: "Telegram канал",
     description: "Подписывайтесь и запускайте чат-бота",
-    href: "#",
+    href: "https://t.me/SuchkaSound_bot",
     icon: TelegramIcon,
   },
   {
