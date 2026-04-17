@@ -2,45 +2,33 @@ import { motion } from "framer-motion"
 import { ProfileSection } from "@/components/ProfileSection"
 import { LinkCard } from "@/components/LinkCard"
 import { SocialFooter } from "@/components/SocialFooter"
-import { Globe, Youtube, Mail, ShoppingBag, FileText, MessageCircle, Send } from "lucide-react"
+import Icon from "@/components/ui/icon"
+import { Send } from "lucide-react"
+
+const TelegramIcon = () => <Icon name="Send" size={20} />
+const VkIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+    <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14C20.67 22 22 20.67 22 15.07V8.93C22 3.33 20.67 2 15.07 2zm3.08 13.27h-1.56c-.59 0-.77-.47-1.83-1.55-.92-.9-1.33-.9-1.56-.9-.31 0-.4.09-.4.52v1.42c0 .37-.12.59-1.1.59-1.62 0-3.42-.98-4.69-2.8C5.57 10.61 5 8.76 5 8.37c0-.23.09-.45.52-.45h1.56c.39 0 .54.18.69.6.76 2.18 2.03 4.09 2.55 4.09.2 0 .29-.09.29-.59V9.86c-.06-1.07-.62-1.16-.62-1.54 0-.18.15-.37.39-.37h2.45c.33 0 .45.18.45.56v3.01c0 .33.15.45.24.45.2 0 .37-.12.74-.49 1.15-1.28 1.97-3.25 1.97-3.25.11-.23.3-.45.69-.45h1.56c.47 0 .57.24.47.56-.2.93-2.12 3.62-2.12 3.62-.17.27-.23.39 0 .69.17.23.72.71 1.09 1.13.68.76 1.2 1.4 1.34 1.84.14.43-.08.65-.51.65z"/>
+  </svg>
+)
 
 const links = [
   {
-    title: "Мой сайт",
-    description: "Портфолио и услуги",
+    title: "Telegram канал",
+    description: "Подписывайтесь и запускайте чат-бота",
     href: "#",
-    icon: Globe,
+    icon: TelegramIcon,
   },
   {
-    title: "YouTube канал",
-    description: "Видео и туториалы",
+    title: "ВКонтакте",
+    description: "Подписывайтесь и запускайте чат-бота",
     href: "#",
-    icon: Youtube,
-  },
-  {
-    title: "Магазин",
-    description: "Товары и услуги",
-    href: "#",
-    icon: ShoppingBag,
-  },
-  {
-    title: "Telegram",
-    description: "Написать напрямую",
-    href: "#",
-    icon: Send,
-  },
-  {
-    title: "Бесплатные материалы",
-    description: "Шаблоны и гайды",
-    href: "#",
-    icon: FileText,
+    icon: VkIcon,
   },
 ]
 
 const socials = [
   { icon: Send, href: "#", label: "Telegram" },
-  { icon: MessageCircle, href: "#", label: "WhatsApp" },
-  { icon: Mail, href: "#", label: "Email" },
 ]
 
 const containerVariants = {
@@ -211,9 +199,9 @@ export function LinkBioPage() {
       >
         <motion.div variants={itemVariants} className="pt-2">
           <ProfileSection
-            name="GlassLinks"
-            bio="Креативный дизайнер и разработчик"
-            imageUrl="/images/544291433-18043960274659947-5766591717842883293-n.jpg"
+            name="Мои каналы"
+            bio="Подписывайтесь на Telegram и ВКонтакте — там всё самое важное"
+            imageUrl="/placeholder-user.jpg"
           />
         </motion.div>
 
@@ -226,7 +214,7 @@ export function LinkBioPage() {
         </motion.div>
 
         <motion.div variants={itemVariants} className="pb-2">
-          <SocialFooter socials={socials} copyright="2025 GlassLinks" />
+          <SocialFooter socials={socials} copyright={`${new Date().getFullYear()}`} />
         </motion.div>
       </motion.div>
     </main>
